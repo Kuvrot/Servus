@@ -22,6 +22,20 @@ if ("webkitSpeechRecognition" in window){
 
       if (commands[0][i] == "servus"|| commands[0][i] == "cervus" || commands[0][i] == "bus" || commands[0][i] == "servers" || commands[0][i] == "servos" || commands[0][i] == "fergus" || commands[0][i] == "sorbus" || commands[0][i] == "ser" || commands[0][i] == "servir")
       {
+
+        fetch('https://65f0f7ddda8c6584131ca63f.mockapi.io/Orders', {
+        method: 'POST',
+        body: JSON.stringify({
+          order: commands[0][i+1]
+        }),
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8'
+        }
+      })
+  .then(response => response.json())
+  .then(data => console.log(data));
+
+
         if (commands[0][i + 1] == 'poner' || commands[0][i + 1] == 'pon')
         {
           if (commands[0][i + 2] == 'música')
