@@ -145,20 +145,22 @@ if ("webkitSpeechRecognition" in window){
           })
           .then(response => response.json())
           .then(data => console.log(data));
+        }else{
+          fetch('https://65f0f7ddda8c6584131ca63f.mockapi.io/Orders', {
+            method: 'POST',
+            body: JSON.stringify({
+              order: commands[0]
+            }),
+            headers: {
+              'Content-type': 'application/json; charset=UTF-8'
+            }
+          })
+          .then(response => response.json())
+          .then(data => console.log(data));
+    
         }
 
-        fetch('https://65f0f7ddda8c6584131ca63f.mockapi.io/Orders', {
-        method: 'POST',
-        body: JSON.stringify({
-          order: commands[0]
-        }),
-        headers: {
-          'Content-type': 'application/json; charset=UTF-8'
-        }
-      })
-      .then(response => response.json())
-      .then(data => console.log(data));
-
+        
         break;
       }
     }  
