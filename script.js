@@ -6,6 +6,14 @@ if ("webkitSpeechRecognition" in window){
   // Establecer el idioma de reconocimiento de voz
   recognition.lang = "es-ES";
 
+  let l_bedroom = 0;
+  let l_living = 0;
+  let l_garden = 0;
+  let l_fan = 0;
+  let l_courtains = 0;
+  let l_alarm = 0;
+  let l_cameras = 0;
+  
   // Evento cuando la voz es detectada
   recognition.onresult = function (event) {
     const result = event.results[0][0].transcript; // Obtener el texto reconocido
@@ -61,13 +69,6 @@ if ("webkitSpeechRecognition" in window){
           window.open("https://google.com");
         }
 
-        let l_bedroom = 0;
-        let l_living = 0;
-        let l_garden = 0;
-        let l_fan = 0;
-        let l_courtains = 0;
-        let l_alarm = 0;
-        let l_cameras = 0;
         let house  = false;
 
         if (commands[0][i+1] == "encender" || commands[0][i+1] == "prender"){
