@@ -71,7 +71,7 @@ if ("webkitSpeechRecognition" in window){
 
         let house  = false;
 
-        if (commands[0][i+1] == "encender" || commands[0][i+1] == "prender"){
+        if (commands[0][i+1] == "encender" || commands[0][i+1] == "prender" || commands[0][i+1] == "abrir"){
           if (commands[0][i+2] == "recámara" || commands[0][i+2] == "habitación" || commands[0][i+2] == "cuarto"){
               l_bedroom = 1;
           }
@@ -99,7 +99,7 @@ if ("webkitSpeechRecognition" in window){
           house = true;
         }
 
-        if (commands[0][i+1] == "apagar"){
+        if (commands[0][i+1] == "apagar" || commands[0][i+1] == "cerrar"){
           if (commands[0][i+2] == "recámara" || commands[0][i+2] == "habitación" || commands[0][i+2] == "cuarto"){
               l_bedroom = 0;
           }
