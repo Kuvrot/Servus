@@ -128,7 +128,7 @@ if ("webkitSpeechRecognition" in window){
 
         if (house){
             fetch('https://65f0f7ddda8c6584131ca63f.mockapi.io/house/1', {
-            method: 'POST',
+            method: 'PUT',
             body: JSON.stringify({
               luzRecamara: l_bedroom,
               luzSala : l_living,
