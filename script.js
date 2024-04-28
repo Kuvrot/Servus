@@ -96,6 +96,10 @@ if ("webkitSpeechRecognition" in window){
             l_cameras = 1;
           }
 
+          if (commands[0][i+2] == "alarma"){
+            l_alarm = 1;
+          }
+
           house = true;
         }
 
@@ -124,8 +128,8 @@ if ("webkitSpeechRecognition" in window){
             l_cameras = 0;
           }
 
-          if (commands[0][i+2] == "cámaras" || commands[0][i+2] == "camaras" || commands[0][i+2] == "vigiliancia"){
-            l_cameras = 0;
+          if (commands[0][i+2] == "alarma"){
+            l_alarm = 0;
           }
 
           house = true;
