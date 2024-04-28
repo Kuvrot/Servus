@@ -5,6 +5,8 @@ Servus is a virtual made in javascript that will help you with simple task like 
 
 Servus siempre está escuchando, por lo que no es necesario activar manualmente el reconocimiento de voz.
 
+Antes de iniciar es necesario introdcir un PIN con la voz, por defecto es `1958`.
+
 - El proyecto solo detecta español.
 - Todas las órdenes deben ir precedidas por "Servus".
 - A continuación todas las órdenes:
