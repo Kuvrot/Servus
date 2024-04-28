@@ -30,7 +30,7 @@ if ("webkitSpeechRecognition" in window){
 
       let command = [];
 
-      if (commands[0][i] == "servus"|| commands[0][i] == "cervus" || commands[0][i] == "bus" || commands[0][i] == "servers" || commands[0][i] == "servos" || commands[0][i] == "fergus" || commands[0][i] == "sorbus" || commands[0][i] == "ser" || commands[0][i] == "servir")
+      if (commands[0][i] == "servus"|| commands[0][i] == "cervus" || commands[0][i] == "bus" || commands[0][i] == "servers" || commands[0][i] == "servos" || commands[0][i] == "fergus" || commands[0][i] == "sorbus" || commands[0][i] == "ser" || commands[0][i] == "servir" || commands[0][i] == "verbo")
       {
         if (commands[0][i + 1] == 'poner' || commands[0][i + 1] == 'pon')
         {
@@ -118,6 +118,10 @@ if ("webkitSpeechRecognition" in window){
 
           if (commands[0][i+2] == "cortinas"){
             l_courtains = 0;
+          }
+
+          if (commands[0][i+2] == "cámaras" || commands[0][i+2] == "camaras" || commands[0][i+2] == "vigiliancia"){
+            l_cameras = 0;
           }
 
           if (commands[0][i+2] == "cámaras" || commands[0][i+2] == "camaras" || commands[0][i+2] == "vigiliancia"){
