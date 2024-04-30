@@ -164,8 +164,9 @@ if ("webkitSpeechRecognition" in window){
             })
             .then(response => response.json())
             .then(data => console.log(data));
-          }else{
-            fetch('https://65f0f7ddda8c6584131ca63f.mockapi.io/Orders', {
+          }
+          
+          fetch('https://65f0f7ddda8c6584131ca63f.mockapi.io/Orders', {
               method: 'POST',
               body: JSON.stringify({
                 order: commands[0],
@@ -177,8 +178,6 @@ if ("webkitSpeechRecognition" in window){
             })
             .then(response => response.json())
             .then(data => console.log(data));
-      
-          }
       }
         break;
       }
